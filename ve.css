@@ -1,0 +1,115 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.header {
+    background-color: #3498db;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #333;
+}
+
+.menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 14px 22px;
+}
+
+.menu a:hover {
+    background-color: #555;
+}
+
+.main {
+    display: flex;
+    gap: 15px;
+    margin: 15px 0;
+    align-items: stretch;
+}
+
+.content {
+    flex: 3;
+    min-width: 0;
+    padding: 20px;
+    background-color: white;
+}
+
+.content h2,
+.sidebar h2 {
+    margin-bottom: 10px;
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.box {
+    padding: 25px 10px;
+    text-align: center;
+    background-color: #d6eaf8;
+    border: 1px solid #aed6f1;
+}
+
+.sidebar {
+    flex: 1;
+    min-width: 0;
+    padding: 20px;
+    background-color: #ddd;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #333;
+    color: white;
+}
+
+/* Responsive cho may tinh bang va dien thoai */
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .box-container {
+        grid-template-columns: 1fr;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu a {
+        text-align: center;
+        border-bottom: 1px solid #555;
+    }
+
+    .header {
+        padding: 20px;
+    }
+}
